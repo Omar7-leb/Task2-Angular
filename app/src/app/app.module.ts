@@ -12,12 +12,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { TablePageComponent } from './table-page/table-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RowInfoComponent } from './row-info/row-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TablePageComponent
+    TablePageComponent,
+    RowInfoComponent
   ],
   imports: [
     BrowserModule,

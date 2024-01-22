@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-table-page',
@@ -7,10 +8,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./table-page.component.css'],
 })
 export class TablePageComponent implements OnInit {
-  // Declare a variable to store the API data
   tableData: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     // Make the API request when the component initializes
@@ -18,5 +18,9 @@ export class TablePageComponent implements OnInit {
       .subscribe((data: any) => {
         this.tableData = data;
       });
+  }
+
+  navigateToRowInfo(id: number):void {
+    this.router.navigate(['/row-info' , id]);
   }
 }
