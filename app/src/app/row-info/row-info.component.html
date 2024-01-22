@@ -1,20 +1,23 @@
 <div class="row-info-container">
-    <h2>Row Information for ID: {{ id }}</h2>
     <div *ngIf="rowData">
       <div class="info-item">
-        <strong>Name:</strong> {{ rowData.name }}
+        <strong>الاسم:</strong>
+        <div class="field-value">{{ rowData.name }}</div>
       </div>
       <div class="info-item">
-        <strong>Date of Birth:</strong> {{ rowData.dob }}
+        <strong>تاريخ الميلاد:</strong> 
+        <div class="field-value">{{ rowData.dob }}</div>
       </div>
       <div class="info-item">
-        <strong>Phone Number:</strong> {{ rowData.phone }}
+        <strong>رقم الهاتف :</strong>
+        <div class="field-value">{{ rowData.phone }}</div>
       </div>
       <div class="info-item">
-        <strong>Comments:</strong>
+        <strong class="comments-title">التعليقات :</strong>
         <ul>
           <li *ngFor="let comment of rowData.comments">
-            {{ comment.text }} ({{ comment.commentDate | date:'short' }})
+            <p>{{ comment.commentDate | date:'short' }}</p>
+            <p>{{ comment.text }}</p> 
           </li>
         </ul>
       </div>

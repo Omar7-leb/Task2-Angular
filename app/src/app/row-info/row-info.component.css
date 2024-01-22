@@ -1,23 +1,22 @@
 .row-info-container {
     max-width: 600px;
     margin: 20px auto;
+    direction: rtl; /* Right-to-left layout */
   }
   
   .info-item {
     margin-bottom: 15px;
+    border-bottom: 1px solid #ccc; /* Line under each field */
   }
   
-  .info-item strong {
-    margin-right: 5px;
+  .field-value {
+    display: inline-block;
     font-weight: bold;
+    margin-left: 10px; /* Adjust the padding between title and value */
   }
   
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 5px;
+  .comments-title {
+    color: green; /* Green color for the comments title */
+    font-weight: bold;
   }
   
