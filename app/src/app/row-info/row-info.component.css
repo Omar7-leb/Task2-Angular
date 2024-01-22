@@ -1,0 +1,23 @@
+.row-info-container {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .info-item {
+    margin-bottom: 15px;
+  }
+  
+  .info-item strong {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  

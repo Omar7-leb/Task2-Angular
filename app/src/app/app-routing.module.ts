@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, provideRouter, withComponentInputBinding } from '@angular/router';
 import { TablePageComponent } from './table-page/table-page.component';
 import { LoginComponent } from './login/login.component';
 import { RowInfoComponent } from './row-info/row-info.component';
@@ -15,5 +15,8 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [
+    provideRouter(routes , withComponentInputBinding())
+  ]
 })
 export class AppRoutingModule {}

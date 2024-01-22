@@ -1,1 +1,23 @@
-<p>row-info works!</p>
+<div class="row-info-container">
+    <h2>Row Information for ID: {{ id }}</h2>
+    <div *ngIf="rowData">
+      <div class="info-item">
+        <strong>Name:</strong> {{ rowData.name }}
+      </div>
+      <div class="info-item">
+        <strong>Date of Birth:</strong> {{ rowData.dob }}
+      </div>
+      <div class="info-item">
+        <strong>Phone Number:</strong> {{ rowData.phone }}
+      </div>
+      <div class="info-item">
+        <strong>Comments:</strong>
+        <ul>
+          <li *ngFor="let comment of rowData.comments">
+            {{ comment.text }} ({{ comment.commentDate | date:'short' }})
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
